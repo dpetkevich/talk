@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @room.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @room.longitude %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @room.name %>
+</p>
+
+<ul>
+<% @lines.each do |line|%>
+<br>
+<%=line.content %>
+</br>
+<%end%>
+</ul>
+
+<%= link_to 'New', new_room_line_path(@room) %> |
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

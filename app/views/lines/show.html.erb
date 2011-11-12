@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<p>
+  <b>User:</b>
+  <%= @line.user_id %>
+</p>
+
+<p>
+  <b>User name:</b>
+  <%= @line.user_name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @line.content %>
+</p>
+
+<%= link_to 'Edit', edit_room_line_path(@room, @line) %> |
+<%= link_to 'Back', room_lines_path(@room) %>
+

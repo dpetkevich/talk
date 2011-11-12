@@ -1,0 +1,33 @@
+<h1>Listing lines</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>User</th>
+    <th>User name</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lines.each do |line| %>
+  <tr>
+
+    <td><%= line.user_id %></td>
+    <td><%= line.user_name %></td>
+    <td><%= line.content %></td>
+    <td><%= link_to 'Show', room_line_path(@room, line) %></td>
+    <td><%= link_to 'Edit', edit_room_line_path(@room, line) %></td>
+
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%= link_to 'New Line', new_room_line_path(@room) %>
+
+
+
